@@ -118,6 +118,7 @@ ul, li, p, h1, h2, h3, td, tr{
 
 .swiper{
     width: 335px;
+    height: 529px;
 
 }
 
@@ -146,6 +147,7 @@ ul, li, p, h1, h2, h3, td, tr{
     flex-direction: column;
     gap: 24px;
     margin-bottom: 24px;
+    height: 469px;
 }
 
 
@@ -249,7 +251,7 @@ ul, li, p, h1, h2, h3, td, tr{
 }
 .swiper-button-next, .swiper-button-prev{
     border-radius: 60px;
-    border: 1px solid var(--white, #F6F5EF);
+    border: 1px solid #F6F5EF;
     display: inline-flex;
     padding: 14px 16px;
     width: 50px;
@@ -257,7 +259,10 @@ ul, li, p, h1, h2, h3, td, tr{
     color: #F6F5EF;
 }
 
-.swiper-button-next:hover, .swiper-button-next:focus,
+.swiper-button-next:hover, .swiper-button-next:focus{
+    border-color: #93ABAE;
+        color: #93ABAE;
+}
 .swiper-button-prev:hover, .swiper-button-prev:focus{
     border-color: #93ABAE;
     color: #93ABAE;
@@ -287,6 +292,8 @@ ul, li, p, h1, h2, h3, td, tr{
         margin-top: calc(0px - (var(--swiper-navigation-size))); 
   }
 
+
+
   .swiper-button-next{
     right: var(--swiper-navigation-sides-offset, 41%);
   }
@@ -296,9 +303,53 @@ ul, li, p, h1, h2, h3, td, tr{
   }
 }
 
+  @media only screen and (max-width: 767.98px) {
+      .swiper-button-next {
+          right: var(--swiper-navigation-sides-offset, 33%);
+      }
+
+      .swiper-button-prev {
+          left: var(--swiper-navigation-sides-offset, 33%);
+      }
+
+  }
+
 @media only screen and (min-width: 1280px) {
 .swiper-button-next{
     transform: translateX(-40%);
   }
 }
 
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 32px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--light-green, #93ABAE);
+    width: 44px;
+    height: 44px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+@media only screen and (min-width: 768px) {
+    #myBtn {
+        bottom: 328px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #myBtn {
+        bottom: 328px;
+    }
+}
+
+
+#myBtn:hover {
+    background-color: #88B3B9;
+}
