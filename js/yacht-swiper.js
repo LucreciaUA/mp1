@@ -1,8 +1,9 @@
 
 var swiper = new Swiper(".my-swiper", {
             direction: 'horizontal',
-            loop: true,
-nested: true,
+
+    loop: true,
+        
             slidesPerView: 1,
             spaceBetween: 10,
             breakpoints: {
