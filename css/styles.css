@@ -1,52 +1,154 @@
-body{
-    
-    color: #F6F5EF;
+:root {
+    font-family: DM Sans, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    --grey: #e3e3e3;
+    --blu: #88b3b9;
+    --white: #f6f5ef;
+    --light-green: #93abae;
+    --linear_green: 107deg, #bec7c2 0%, #a1b5ba 100%;
+    --dark_blue: #11131f;
+    --blue_2: #1f212d;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../font/DMSans-Medium.eot');
+    src: url('../font/DMSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/DMSans-Medium.woff2') format('woff2'),
+        url('../font/DMSans-Medium.woff') format('woff'),
+        url('../font/DMSans-Medium.ttf') format('truetype'),
+        url('../font/DMSans-Medium.svg#DMSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../font/DMSans-Regular.eot');
+    src: url('../font/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/DMSans-Regular.woff2') format('woff2'),
+        url('../font/DMSans-Regular.woff') format('woff'),
+        url('../font/DMSans-Regular.ttf') format('truetype'),
+        url('../font/DMSans-Regular.svg#DMSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../font/DMSans-Bold.eot');
+    src: url('../font/DMSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/DMSans-Bold.woff2') format('woff2'),
+        url('DMSans-Bold.woff') format('woff'),
+        url('../font/DMSans-Bold.ttf') format('truetype'),
+        url('../font/DMSans-Bold.svg#DMSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../font/DMSans-MediumItalic.eot');
+    src: url('../font/DMSans-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/DMSans-MediumItalic.woff2') format('woff2'),
+        url('../font/DMSans-MediumItalic.woff') format('woff'),
+        url('../font/DMSans-MediumItalic.ttf') format('truetype'),
+        url('../font/DMSans-MediumItalic.svg#DMSans-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+body {
+    background-color: var(--dark_blue);
+    font-family: 'DM Sans';
+    font-style: normal;
+    color: var(--white);
+}
+
+/**
+  |============================
+  | container
+  |============================
+*/
+
+.container {
+    min-width: 320px;
+    max-width: 375px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tablet screen */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+/* Desktop screen */
+@media only screen and (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+body {
+
+    color: var(--white);
     margin: 0 auto;
 }
-img{
+
+img {
     display: block;
     margin: 0;
 }
-ul{
-    list-style: none;
-}
 
-ul, li, p, h1, h2, h3, td, tr{
+
+
+a,
+p,
+h1,
+h2,
+h3,
+td,
+tr {
     margin: 0;
     padding: 0;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
 
-.yacht-block{
-    min-width: 320px;
-    max-width: 475px;
-    padding-left: 20px;
-    padding-right: 20px;
+.yacht-block {
+    padding-bottom: 80px;
     margin: 0 auto;
-    background-color: #11131F;
-    position: relative;
+
 }
-
-
-
 
 
 @media only screen and (min-width: 768px) {
-   .yacht-block{
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-bottom: 100px;
-  }
+    .yacht-block {
+
+        padding-bottom: 100px;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
-   .yacht-block{
-    max-width: 1280px;
-  }
+    .yacht-block {
+        padding-bottom: 164px;
+    }
 }
 
 .hd-yacht {
@@ -62,84 +164,186 @@ ul, li, p, h1, h2, h3, td, tr{
 }
 
 @media only screen and (min-width: 768px) {
-   .hd-yacht{
-    font-size: 70px;
-    letter-spacing: -3.15px;
-    margin-bottom: 64px;
-  }
+    .hd-yacht {
+        font-size: 70px;
+        letter-spacing: -3.15px;
+        margin-bottom: 64px;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
-   .hd-yacht{
-    font-size: 100px;
-    line-height: 110%;
-    letter-spacing: -4.5px;
+    .hd-yacht {
+        font-size: 100px;
+        line-height: 110%;
+        letter-spacing: -4.5px;
 
-  }
+    }
 }
 
-.rent-yacht{
+.rent-yacht {
     display: block;
     width: 131px;
     height: 43px;
-    padding: 14px 28px;
+    padding: 14px 0;
     align-items: flex-start;
     border-radius: 60px;
-    border: 1px solid #F6F5EF;
-    color: #F6F5EF;
+    border: 1px solid var(--white);
+    color: var(--white);
     font-size: 14px;
-        font-weight: 700;
-        line-height: 110%;
-        letter-spacing: -0.63px;
-        margin-bottom: 80px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.63px;
+    margin-bottom: 80px;
+    text-align: center;
 }
 
-.rent-yacht:hover, .rent-yacht:focus{
-    color: #93ABAE;
-    border-color: #93ABAE;
-}
-
-@media only screen and (min-width: 768px) {
-   .rent-yacht{
-    width: 153px;
-    height: 48px;
-    font-size: 18px;
-    letter-spacing: -0.81px;
-    margin-bottom: 100px;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-   .rent-yacht{
-    margin-bottom: 164px;
-  }
-}
-
-
-.swiper{
-    width: 335px;
-    height: 529px;
-
+.rent-yacht:hover,
+.rent-yacht:focus {
+    color: var(--light-green);
+    border-color: var(--light-green);
 }
 
 @media only screen and (min-width: 768px) {
-   .swiper{
-    width: 704px;
-    height: 576px;
-    
-  }
+    .rent-yacht {
+        width: 153px;
+        height: 48px;
+        font-size: 18px;
+        letter-spacing: -0.81px;
+        margin-bottom: 100px;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
-.swiper {
-        width: 1098px;
-        position: relative;
+    .rent-yacht {
+        margin-bottom: 164px;
     }
 }
 
 
-.swiper-slide{
-    background-color: #1F212D;
+/*swiper block*/
+.swiper-block {
+    width: auto;
+    position: relative;
+    height: 529px;
+}
+
+@media only screen and (min-width: 768px) {
+.swiper-block {
+        width: 704px;
+        height: 576px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+.swiper-block {
+        width: auto;
+        height: 508px;
+    }
+}
+
+
+.yacht-block .swiper {
+    width: 335px;
+}
+
+@media only screen and (min-width: 768px) {
+    .yacht-block .swiper {
+        width: 704px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .yacht-block .swiper {
+        width: 1098px;   
+    }
+}
+/*swiper btn*/
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 60px;
+    border: 1px solid var(--white);
+    display: inline-flex;
+    padding: 14px 14px;
+    width: 46px;
+    height: 36px;
+    color: var(--white);
+}
+
+@media only screen and (min-width: 768px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 50px;
+        height: 36px;
+        padding: 14px 16px;
+    }
+}
+
+.swiper-button-next:hover,
+.swiper-button-next:focus,
+.swiper-button-prev:hover,
+.swiper-button-prev:focus {
+    border-color: var(--light-green);
+    color: var(--light-green);
+}
+
+.arrow-icon {
+    fill: var(--white);
+}
+
+.swiper-button-next:hover .arrow-icon,
+.swiper-button-next:focus .arrow-icon,
+.swiper-button-prev:hover .arrow-icon,
+.swiper-button-prev:focus .arrow-icon {
+    fill: var(--light-green);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: none;
+}
+
+@media only screen and (max-width: 1279.98px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        bottom: 0;
+        margin-top: auto;
+    }
+
+    .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset, 41%);
+    }
+
+    .swiper-button-prev {
+        left: var(--swiper-navigation-sides-offset, 41%);
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset, 33%);
+    }
+
+    .swiper-button-prev {
+        left: var(--swiper-navigation-sides-offset, 33%);
+    }
+
+}
+
+@media only screen and (min-width: 1280px) {
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev{
+        left: 0;
+    }
+}
+/*swiper slides*/
+
+.yacht-block .swiper-slide {
+    background-color: var(--blue_2);
     width: 335px;
     padding: 18px 18px 24px 18px;
     border-radius: 24px;
@@ -151,11 +355,8 @@ ul, li, p, h1, h2, h3, td, tr{
 }
 
 
-
-
-
 @media only screen and (min-width: 768px) {
-    .swiper-slide {
+    .yacht-block .swiper-slide {
         width: 344px;
         padding: 16px 16px 32px 16px;
         height: 508px;
@@ -164,30 +365,32 @@ ul, li, p, h1, h2, h3, td, tr{
 }
 
 @media only screen and (min-width: 1280px) {
-    .swiper-slide {
+    .yacht-block .swiper-slide {
         width: 354px;
     }
 }
 
-.swiper-slide img{
+.yacht-block .swiper-slide img {
     border-radius: 24px;
     overflow: hidden;
     width: 299px;
 }
 
 @media only screen and (min-width: 768px) {
-.swiper-slide img{
-    width: 312px;
-  }
+    .yacht-block .swiper-slide img {
+        width: 312px;
+    }
 }
+
 @media only screen and (min-width: 768px) {
-    .swiper-slide img {
+    .yacht-block .swiper-slide img {
         width: 322px;
+        height: 268px;
     }
 }
 
 
-.yacht-info{
+.yacht-info {
     display: flex;
     justify-content: space-between;
     padding-left: 6px;
@@ -196,13 +399,13 @@ ul, li, p, h1, h2, h3, td, tr{
 }
 
 @media only screen and (min-width: 768px) {
-   .yacht-info{
-    padding-left: 8px;
+    .yacht-info {
+        padding-left: 8px;
         padding-right: 8px;
-  }
+    }
 }
 
-.yacht-name{
+.yacht-name {
     width: 177px;
     height: 19px;
     text-overflow: ellipsis;
@@ -215,7 +418,7 @@ ul, li, p, h1, h2, h3, td, tr{
     text-transform: uppercase;
 }
 
-.swiper-slide p{
+.yacht-block .swiper-slide p {
     opacity: 0.5;
     font-size: 12px;
     line-height: 118%;
@@ -223,102 +426,33 @@ ul, li, p, h1, h2, h3, td, tr{
     text-transform: uppercase;
 }
 
-.yacht-propeties{
+.yacht-propeties {
     display: flex;
     font-size: 14px;
     line-height: 118%;
     letter-spacing: 0.42px;
 }
 
-.yacht-propeties td:first-child{
+.yacht-propeties td:first-child {
     text-transform: uppercase;
     padding-right: 32px;
     padding-left: 6px;
 }
 
 @media only screen and (min-width: 768px) {
-.yacht-propeties td:first-child{
-    padding-left: 8px;
-  }
+    .yacht-propeties td:first-child {
+        padding-left: 8px;
+    }
 }
 
-.yacht-propeties td{
+.yacht-propeties td {
     padding-bottom: 8px;
 }
 
-.yacht-propeties tr:last-child td{
+.yacht-propeties tr:last-child td {
     padding-bottom: 0;
 }
-.swiper-button-next, .swiper-button-prev{
-    border-radius: 60px;
-    border: 1px solid #F6F5EF;
-    display: inline-flex;
-    padding: 14px 16px;
-    width: 50px;
-    height: 36px;
-    color: #F6F5EF;
-}
 
-.swiper-button-next:hover, .swiper-button-next:focus{
-    border-color: #93ABAE;
-        color: #93ABAE;
-}
-.swiper-button-prev:hover, .swiper-button-prev:focus{
-    border-color: #93ABAE;
-    color: #93ABAE;
-}
-
-.arrow-icon {
-    fill: #F6F5EF;
-}
-
-.swiper-button-next:hover .arrow-icon,
-.swiper-button-next:focus .arrow-icon,
-.swiper-button-prev:hover .arrow-icon,
-.swiper-button-prev:focus .arrow-icon{
-    fill: #93ABAE;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    content: none;
-}
-
-
-
-@media only screen and (max-width: 1279.98px) {
-   .swiper-button-next, .swiper-button-prev{
-        top: var(--swiper-navigation-top-offset, 100%);
-        margin-top: calc(0px - (var(--swiper-navigation-size))); 
-  }
-
-
-
-  .swiper-button-next{
-    right: var(--swiper-navigation-sides-offset, 41%);
-  }
-
-  .swiper-button-prev{
-    left: var(--swiper-navigation-sides-offset, 41%);
-  }
-}
-
-  @media only screen and (max-width: 767.98px) {
-      .swiper-button-next {
-          right: var(--swiper-navigation-sides-offset, 33%);
-      }
-
-      .swiper-button-prev {
-          left: var(--swiper-navigation-sides-offset, 33%);
-      }
-
-  }
-
-@media only screen and (min-width: 1280px) {
-.swiper-button-next{
-    transform: translateX(-40%);
-  }
-}
 
 #myBtn {
     display: none;
@@ -328,7 +462,7 @@ ul, li, p, h1, h2, h3, td, tr{
     z-index: 99;
     border: none;
     outline: none;
-    background-color: var(--light-green, #93ABAE);
+    background-color: var(--light-green);
     width: 44px;
     height: 44px;
     color: white;
@@ -341,14 +475,41 @@ ul, li, p, h1, h2, h3, td, tr{
 @media only screen and (min-width: 768px) {
     #myBtn {
         bottom: 328px;
+        width: 68px;
+        height: 68px;
     }
 }
+
 @media only screen and (min-width: 768px) {
     #myBtn {
         bottom: 328px;
     }
 }
 
+.tablet-arrow{
+    display: none;
+}
+.pc-arrow {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+.tablet-arrow {
+        display: flex;
+    }
+  .phone-arrow{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+.tablet-arrow {
+        display: none;
+    }
+.pc-arrow {
+    display: flex;
+}
+}
 
 #myBtn:hover {
     background-color: #88B3B9;
