@@ -126,6 +126,9 @@ tr {
     margin: 0;
     padding: 0;
 }
+button{
+    font-family: DM Sans;
+}
 
 .link {
     text-decoration: none;
@@ -151,23 +154,34 @@ tr {
     }
 }
 
+.yacht-hl-block{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+ .yacht-hl-block{
+    gap: 64px;
+  }
+}
+
 .hd-yacht {
-    max-width: 882px;
+    max-width: 310px;
     font-size: 36px;
-    font-style: normal;
     font-weight: 500;
     line-height: 110%;
     letter-spacing: -1.62px;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    font-family: DM Sans;
 }
 
 @media only screen and (min-width: 768px) {
     .hd-yacht {
         font-size: 70px;
-        letter-spacing: -3.15px;
+        letter-spacing: -1.15px;
         margin-bottom: 64px;
+        max-width: 640px;
     }
 }
 
@@ -175,8 +189,9 @@ tr {
     .hd-yacht {
         font-size: 100px;
         line-height: 110%;
-        letter-spacing: -4.5px;
-
+        letter-spacing: -3.5px;
+        max-width: 882px;
+        margin: 0 auto;
     }
 }
 
@@ -189,6 +204,7 @@ tr {
     border-radius: 60px;
     border: 1px solid var(--white);
     color: var(--white);
+    font-family: DM Sans;
     font-size: 14px;
     font-weight: 700;
     line-height: 110%;
@@ -514,4 +530,113 @@ tr {
 
 #myBtn:hover {
     background-color: #88B3B9;
+}
+
+
+.yacht-mask{
+position: absolute;
+z-index: -1;
+top: 10%;
+    left: 12%;
+    opacity: 0.35;
+}
+
+@media only screen and (max-width: 1279.98px) {
+.yacht-mask{
+    display: none;
+    
+  }
+}
+
+.yacht-circle-one{
+    width: 225px;
+        height: 225px;
+        transform: rotate(-45.044deg);
+        flex-shrink: 0;
+        border-radius: 225px;
+        opacity: 0.6;
+        background: #93abae;
+        filter: blur(100px);
+        position: absolute;
+        top: -5%;
+        left: 10%;
+        z-index: 999;
+    }
+.yacht-circle-two{
+    width: 195px;
+        height: 195px;
+        transform: rotate(-45.044deg);
+        flex-shrink: 0;
+        border-radius: 316px;
+        opacity: 0.3;
+        background: #93abae;
+        filter: blur(100px);
+        position: absolute;
+        top: -5%;
+        left: 50%;
+        z-index: 999;
+}
+
+@media only screen and (min-width: 768px) {
+.yacht-circle-one {
+        width: 399px;
+        height: 399px;
+        transform: rotate(-45.044deg);
+        flex-shrink: 0;
+        border-radius: 399px;
+        opacity: 0.6;
+        background: #93abae;
+        filter: blur(100px);
+        position: absolute;
+        top: -10%;
+        left: 12%;
+        z-index: 999;
+    }
+
+    .yacht-circle-two {
+        width: 304px;
+        height: 304px;
+        transform: rotate(-45.044deg);
+        flex-shrink: 0;
+        border-radius: 316px;
+        opacity: 0.3;
+        background: #93abae;
+        filter: blur(100px);
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        z-index: 999;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+.yacht-circle-one {
+        width: 414px;
+        height: 414px;
+        transform: rotate(-45.044deg);
+        flex-shrink: 0;
+        border-radius: 414px;
+        opacity: 0.6;
+        background: #93abae;
+        filter: blur(100px);
+        position: absolute;
+        top: -25%;
+        left: 25%;
+        z-index: 999;
+    }
+
+    .yacht-circle-two {
+        width: 316px;
+        height: 316px;
+        transform: rotate(-45.044deg);
+        flex-shrink: 0;
+        border-radius: 316px;
+        opacity: 0.3;
+        background: #93abae;
+        filter: blur(100px);
+        position: absolute;
+        top: -25%;
+        left: 50%;
+        z-index: 999;
+    }
 }
