@@ -2,6 +2,7 @@
 var swiper = new Swiper(".my-swiper", {
             direction: 'horizontal',
             loop: true,
+nested: true,
             slidesPerView: 1,
             spaceBetween: 10,
             breakpoints: {
